@@ -13,7 +13,11 @@
 package xss.it.demo;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import xss.it.icons.feather.Feather;
+import xss.it.icons.feather.FeatherIcon;
 
 /**
  * @author XDSSWAR
@@ -40,7 +44,11 @@ public class Demo extends Application {
      */
     @Override
     public void start(Stage stage) {
-
+        var icon = new FeatherIcon(Feather.AIRPLAY);
+        icon.setSize("300px");
+        Scene scene = new Scene(new VBox(icon), 300, 300);
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
